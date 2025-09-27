@@ -45,7 +45,7 @@ export default function Results({ data }: { data: any }) {
                             { data ? (
                                 <div className="space-y-4">
                                       <pre className="bg-muted p-4 rounded-lg text-sm overflow-auto text-foreground">
-                                        {JSON.stringify(data, null, 2).replace(/\\n/g, '\n')}
+                                       {JSON.stringify(data, null, 2).replace(/\\n/g, '\n').replace(/\\"/g, '"')}
                                       </pre>
                                     <div className="flex justify-between items-center">
                                         <div className="flex gap-2">
